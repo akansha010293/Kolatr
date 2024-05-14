@@ -35,14 +35,14 @@ section {
 
 .sticky-container {
   height: 100px;
-  background-color: rgb(75, 70, 74);
+  background-color: rgb(93, 72, 157);
   color: #fff;
   padding: 20px;
 }
 
 .page-body {
   padding: 20px;
-  overflow-y: scroll;
+  overflow-y: auto;
   height: calc(var(100vh-200px));
 }
 

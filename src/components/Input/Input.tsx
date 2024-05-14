@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction } from "react";
 import "./input.css";
-import { Chat } from "../Layout/Container";
+import { Chat } from "../Layout/Layout";
 import React from "react";
 import { randomMessage } from "../helper";
 

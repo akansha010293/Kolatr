@@ -1,4 +1,5 @@
-import { Chat } from "../Layout/Container";
+import React from "react";
+import { Chat } from "../Layout/Layout";
 import "./messageBubble.css";
 
 export interface MessageBubbleProps {
@@ -6,12 +7,24 @@ export interface MessageBubbleProps {
 }
 
 export const MessageBubble = (props: MessageBubbleProps) => {
+  const [isLoading, setIsLoading] = React.useState(false);
   const { response } = props;
+
+  React.useEffect(() => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  }, [response]);
 
   return (
     <div className="messageContainer">
       <OutgoingBubble requestText={response?.request?.utext} />
-      <IncomingBubble responseText={response?.atext} />
+      {isLoading ? (
+        <TypingIndicator />
+      ) : (
+        <IncomingBubble responseText={response?.atext} />
+      )}
     </div>
   );
 };
@@ -29,6 +42,19 @@ const OutgoingBubble = (props: { requestText: string }) => {
   );
 };
 
+const TypingIndicator = () => {
+  return (
+    <div className="recieverContainer">
+      <div className="ticontainer">
+        <div className="tiblock">
+          <div className="tidot"></div>
+          <div className="tidot"></div>
+          <div className="tidot"></div>
+        </div>
+      </div>
+    </div>
+  );
+};
 const IncomingBubble = (props: { responseText: string }) => {
   return (
     <div className="recieverContainer">

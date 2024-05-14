@@ -19,28 +19,33 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### My Approach
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+In this project you will find 3 components
+-Layout - the main container is within the layout
+-Input - A component to fetch the input
+-Message Bubble - This will have a basic Incoming and Outgoing Message component
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+I started by creating my draft modal with mockData as per the API, and did the mapping to fetch the data. 
+I was implementing some test, and I ran out of the number of tries and end up getting LIMIT EXCEEDED.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Due to which to have the chat like interaction, i created a state with initial mock data and then as you submit something in the input it will create a response and give you the look and feel of the chat.
 
-### `npm run eject`
+I have commented the `fetchChat` function in App.tsx and its call in Layout, if you are keen to see its implementation.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### HOW ITS IMPLEMENTED
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+I have a layout component, which shows the basic UI for for the chat box. This 
+Which has two component as it's child, wrapped in a WRAPPER that is scrollable and allows scroll to be always at the bottom of the page, showing the user the current messages.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+MESSAGE BUBBLE - this allows user to send a recieve the message with the name and timestamp.
+INPUT - This allows user to type in a text, and get a response wrt to it.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+The response I am generating is coming from a randomMessage function, that returns a random message as soon as your enters a data.
 
-## Learn More
+### HOW IT SHOULD BE DONE
+I would have send the user input to the API to get a response from the SmallTalk. 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+

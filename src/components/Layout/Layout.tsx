@@ -13,7 +13,8 @@ export type Chat = {
   status: number;
   statusMessage: string;
 };
-export const Container = () => {
+export const Layout = () => {
+  // const [isLoading, setIsLoading] = React.useState(false);
   const [chat, setChat] = React.useState<Chat[]>([
     {
       status: 200,
@@ -35,9 +36,11 @@ export const Container = () => {
   }, [ref.current?.scrollHeight]);
 
   // React.useEffect(() => {
+  //   setIsLoading(true);
   //   fetchChat()
   //     .then((data) => {
   //       if (data.length > 0 && data[0].status === 200) {
+  //         setIsLoading(false);
   //         setChat(data);
   //       }
   //     })

@@ -1,4 +1,3 @@
-import { fetchChat } from "../../App";
 import { Dispatch, SetStateAction } from "react";
 import "./input.css";
 import { Chat } from "../Layout/Container";

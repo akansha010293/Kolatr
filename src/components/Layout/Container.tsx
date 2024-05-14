@@ -2,7 +2,6 @@ import React from "react";
 import { Input } from "../Input/Input";
 import MessageBubble from "../MessageBubble/MessageBubble";
 import "./style.css";
-import { fetchChat } from "../../App";
 
 export type Chat = {
   atext: string;
@@ -49,6 +48,7 @@ export const Container = () => {
     <div className="wrapper">
       <StickyContainer>
         <img
+          alt="cat"
           src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
           className="msgimg"
         />

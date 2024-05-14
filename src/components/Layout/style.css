@@ -1,0 +1,77 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  background-color: #fff;
+  color: #333;
+  font: 1.2em / 1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+section {
+  height: 100%;
+}
+
+.wrapper {
+  border: 1px solid rgb(80, 76, 76);
+  border-radius: 4px;
+  width: 50%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.sticky-container {
+  height: 100px;
+  background-color: rgb(75, 70, 74);
+  color: #fff;
+  padding: 20px;
+}
+
+.page-body {
+  padding: 20px;
+  overflow-y: scroll;
+  height: calc(var(100vh-200px));
+}
+
+img {
+  width: 50px;
+  vertical-align: middle;
+  border-style: none;
+  border-radius: 100%;
+}
+/* Styling the msg-header container */
+.msg-header {
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 10%;
+  border-bottom: none;
+  display: inline-block;
+  background-color: #efefef;
+  margin: 0;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.msgimg {
+  margin-left: 2%;
+  float: left;
+}
+
+/* styling user-name */
+.active {
+  width: 150px;
+  float: left;
+  color: black;
+  font-weight: bold;
+  margin: 0 0 0 5px;
+  height: 10%;
+}

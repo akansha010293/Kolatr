@@ -1,0 +1,12 @@
+[
+  {
+    "status": 200,
+    "statusMessage": "Ok",
+    "atext": "Hello it is a pleasure to meet you!",
+    "lang": "en",
+    "request": {
+      "utext": "hello",
+      "lang": "en"
+    }
+  }
+]

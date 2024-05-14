@@ -56,7 +56,7 @@ export const Layout = () => {
           className="msgimg"
         />
         <div className="active ">
-          <p>Kotalr</p>
+          <p>Kolatr Chatbot</p>
         </div>
       </StickyContainer>
       <article className="page-body" ref={ref}>
